@@ -13,9 +13,7 @@
             <div style="justify-content: start;">
                 <li th:text="${book.name}">Book names ...</li> 
                 <button><a th:href="@{/books/edit/{id}(id=${bookStat.index})}">Edit</a></button>
-                <form th:action="@{/books/delete/{id}(id=${bookStat.index})}" th:method="delete">
-                    <input class="btn btn-default btn-xs" type="submit" value="delete" />
-                </form>
+                <button><a th:href="@{/books/delete/{id}(id=${bookStat.index})}">Delete</a></button>
             </div>
         </ul>
     </div>

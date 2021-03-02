@@ -48,7 +48,7 @@ public class MyController {
         bookList.get(id).setName(b.getName());
         return "redirect:/books";
     }
-    @DeleteMapping(value = "/books/delete/{id}")
+    @GetMapping(value = "/books/delete/{id}")
     public String getBookByIndex(@PathVariable("id") int id){
         bookList.remove(id);
         return "redirect:/books";
